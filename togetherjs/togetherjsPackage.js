@@ -1319,7 +1319,7 @@ channels.FirebaseChannel = util.Class(AbstractChannel, {
 
   _send: function (data) {
     this._local = true;
-    this.ref.push(data);
+    this.ref.ref().push(data);
   },
 
   _ready: function () {
