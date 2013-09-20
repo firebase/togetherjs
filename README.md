@@ -4,7 +4,7 @@ TogetherJS + Firebase
 [TogetherJS](http://togetherjs.com) is a service for your website that makes it surprisingly easy to collaborate in real-time.
 Learn more at the [original Github repository](https://github.com/mozilla/togetherjs).
 
-This repository lets you use <a href="http://firebase.com/" target="_blank">Firebase</a> as the backend for TogetherJS.
+This repository lets you use <a href="http://firebase.com/" target="_blank">Firebase</a> as the backend for your TogetherJS sessions.
 
 ### Benefits
 There are two benefits to using Firebase with TogetherJS:
