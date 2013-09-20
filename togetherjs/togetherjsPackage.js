@@ -1773,7 +1773,7 @@ define('storage',["util"], function (util) {
 
 define('session',["require", "util", "channels", "jquery", "storage"], function (require, util, channels, $, storage) {
 
-  var DEBUG = true;
+  var DEBUG = false;
   // This is the amount of time in which a hello-back must be received after a hello
   // for us to respect a URL change:
   var HELLO_BACK_CUTOFF = 1500;
