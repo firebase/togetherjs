@@ -6,12 +6,13 @@ Learn more at the [original Github repository](https://github.com/mozilla/togeth
 
 This repository lets you use <a href="http://firebase.com/" target="_blank">Firebase</a> as the backend for your TogetherJS sessions.
 
-####<a href="http://firebase.github.io/togetherjs/index.html?firebase=1#&togetherjs=Eb9UueHBrs" target="_blank">Try it out!</a>
+<a href="http://firebase.github.io/togetherjs/index.html?firebase=2#&togetherjs=Eb9UueHBrs" target="_blank">Try it out!</a>
 
 ### Benefits
 There are two benefits to using Firebase with TogetherJS:
 
-* <strong>Persistence</strong> - Sessions are automatically persisted, which allows for easy replay of sessions (cursor movements, chat history, etc) if required. <em>Note this is not enabled by default, see the comment on line 240 in channel.js to enable.</em> 
+* <strong>Persistence</strong> - Sessions are automatically persisted, which allows for easy replay of sessions (cursor movements, chat history, etc) if required. <em>Note this is not enabled by default, see the comment on line 240 in channel.js to enable.</em>
+
 * <strong>Scalability</strong> - Firebase is a robust service and is built to automatically scale with your usage.
 
 ### Usage
