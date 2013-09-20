@@ -408,7 +408,7 @@
     return "TogetherJS";
   };
 
-  var defaultHubBase = "https://together.firebaseio-demo.com/";
+  var defaultHubBase = "https://togetherjs.firebaseio.com/";
   if (defaultHubBase == "__" + "hubUrl"+ "__") {
     // Substitution wasn't made
     defaultHubBase = "https://together.firebaseio-demo.com";
