@@ -215,7 +215,7 @@ module.exports = function (grunt) {
         grunt.log.writeln("No --base-url, using auto-detect");
       }
       var destBase = grunt.option("dest") || "build";
-      var hubUrl = grunt.option("hub-url") || process.env.HUB_URL || "https://hub.togetherjs.com";
+      var hubUrl = grunt.option("hub-url") || process.env.HUB_URL || "https://together.firebaseio-demo.com";
       grunt.log.writeln("Using hub URL " + hubUrl.cyan);
       var gitCommit = process.env.GIT_COMMIT || "";
       var subs = {

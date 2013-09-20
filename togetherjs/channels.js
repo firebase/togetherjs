@@ -6,6 +6,7 @@
 
 - WebSocket to an address
 - postMessage between windows
+- Firebase to persist sessions
 
 In the future:
 
@@ -196,6 +197,58 @@ channels.WebSocketChannel = util.Class(AbstractChannel, {
 
 });
 
+channels.FirebaseChannel = util.Class(AbstractChannel, {
+
+  constructor: function (address) {
+    this.href = address;
+    this.ref = new Firebase(address);
+    this.baseConstructor();
+    this._local = false;
+    this._initial = true;
+  },
+
+  toString: function () {
+    return '[FirebaseChannel to ' + this.href; + ']';
+  },
+
+  close: function () {
+    this.ref.off();
+    this.closed = true;
+    this.emit("close");
+  },
+
+  _send: function (data) {
+    this._local = true;
+    this.ref.push(data);
+  },
+
+  _ready: function () {
+    return true;
+  },
+
+  _setupConnection: function () {
+    if (this.closed) {
+      return;
+    }
+    this._flush();
+    this.ref.on("child_added", function(snapshot) {
+      // Ignore local messages
+      if (this._local) {
+        this._local = false;
+        return;
+      }
+      // Ignore initial messages, remove if you want playback.
+      if (this._initial) {
+        return;
+      }
+      this._incoming(snapshot.val());
+    }, this);
+    this.ref.once("value", function() {
+      console.log("Ignored replay, relaying new events");
+      this._initial = false;
+    }, this);
+  }
+});
 
 /* Sends TO a window or iframe */
 channels.PostMessageChannel = util.Class(AbstractChannel, {

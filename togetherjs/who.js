@@ -10,7 +10,7 @@ define(["util", "channels", "session", "ui"], function (util, channels, session,
   who.getList = function (hubUrl) {
     return util.Deferred(function (def) {
       var expected;
-      var channel = channels.WebSocketChannel(hubUrl);
+      var channel = channels.FirebaseChannel(hubUrl);
       var users = {};
       var responded = 0;
       var firstResponse = 0;
@@ -61,7 +61,7 @@ define(["util", "channels", "session", "ui"], function (util, channels, session,
 
   who.invite = function (hubUrl, clientId) {
     return util.Deferred(function (def) {
-      var channel = channels.WebSocketChannel(hubUrl);
+      var channel = channels.FirebaseChannel(hubUrl);
       var id = util.generateId();
       channel.onmessage = function (msg) {
         if (msg.type == "invite" && msg.inviteId == id) {

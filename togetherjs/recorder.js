@@ -50,7 +50,7 @@ define(["jquery", "util", "channels", "storage"], function ($, util, channels, s
     }
     hubBase = hubBase.replace(/\/*$/, "");
     var url = hubBase + "/hub/" + recorder.shareId;
-    channel = channels.WebSocketChannel(url);
+    channel = channels.FirebaseChannel(url);
     channel.onmessage = function (msg) {
       if (msg.type == "hello-back") {
         display("#connected");

@@ -411,7 +411,7 @@
   var defaultHubBase = "__hubUrl__";
   if (defaultHubBase == "__" + "hubUrl"+ "__") {
     // Substitution wasn't made
-    defaultHubBase = "https://hub.togetherjs.mozillalabs.com";
+    defaultHubBase = "https://together.firebaseio-demo.com";
   }
 
   TogetherJS._configuration = {};
