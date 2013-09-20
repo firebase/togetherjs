@@ -17,17 +17,17 @@ Include the modified version of TogetherJS along with Firebase. You may also
 (optionally) set the HUB URL to your own Firebase:
 
 ```html
-    <script>
-      TowTruckConfig_hubBase = "https://<my-firebase>.firebaseio.com/";
-    </script>
-    <script src="https://cdn.firebase.com/v0/firebase.js"></script>
-    <script src="http://firebase.github.io/togetherjs/togetherjs.js"></script>
+<script>
+  TowTruckConfig_hubBase = "https://<my-firebase>.firebaseio.com/";
+</script>
+<script src="https://cdn.firebase.com/v0/firebase.js"></script>
+<script src="http://firebase.github.io/togetherjs/togetherjs.js"></script>
 ```
 
 Then use TogetherJS as you normally would:
 
 ```html
-    <button onclick="TowTruck(this); return false;">Start TowTruck</button>
+<button onclick="TowTruck(this); return false;">Start TowTruck</button>
 ```
 
 If you want to build your own version of the JavaScript libraries, don't
@@ -35,5 +35,5 @@ forget to set `HUB_URL` to a valid Firebase URL (`https://together.firebaseio-de
 while running grunt. For example:
 
 ```bash
-    HUB_URL="https://<your-firebase>.firebaseio.com/" grunt --base-url="/togetherjs" devwatch
+HUB_URL="https://<your-firebase>.firebaseio.com/" grunt --base-url="/togetherjs" devwatch
 ```
