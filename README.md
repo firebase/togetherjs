@@ -20,7 +20,7 @@ Include the modified version of TogetherJS along with Firebase. You may also
       TowTruckConfig_hubBase = "https://<my-firebase>.firebaseio.com/";
     </script>
     <script src="https://cdn.firebase.com/v0/firebase.js"></script>
-    <script src="http://firebase.github.io/togetherjs/togetherjs-min.js"></script>
+    <script src="http://firebase.github.io/togetherjs/togetherjs.js"></script>
 
 Then use TogetherJS as you normally would:
 
