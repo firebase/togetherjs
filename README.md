@@ -10,7 +10,7 @@ This repository lets you use <a href="http://firebase.com/" target="_blank">Fire
 There are two benefits to using Firebase with TogetherJS:
 
 * <strong>Persistence</strong> - Sessions are automatically persisted, which allows for easy replay of sessions (cursor movements, chat history, etc) if required.
-* <strong>Scalability</strong> - Firebase is built to scale with your usage, eliminating the need to run and manage your own Hub server.
+* <strong>Scalability</strong> - Firebase is built to scale with your usage.
 
 ### Usage
 Include the modified version of TogetherJS along with Firebase. You may also
