@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+  <head>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <style>
+      body {
+        font-family: Helvetica, Arial, Sans;
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <article>
+      <h1>TogetherJS + Firebase</h1>
+      <p>
+        <a href="http://togetherjs.com">TogetherJS</a> is a service for your
+        website that makes it surprisingly easy to collaborate in real-time.
+        Learn more at the <a href="https://github.com/mozilla/togetherjs">original
+        Github repository</a>.
+      </p>
+
+      <p>
+        This code lets you use
+        <a href="http://firebase.com/" target="_blank">Firebase</a> as the
+        backend for your TogetherJS sessions.
+      </p>
+
+      <h3>Benefits</h3>
+      <p>There are two benefits to using Firebase with TogetherJS:</p>
+      <ul>
+        <li><strong>Persistence</strong> - Sessions are automatically persisted,
+        which allows for easy replay of sessions (cursor movements, chat history, etc) if required.</li>
+        <li><strong>Scalability</strong> - Firebase is a robust service and is
+        built to automatically scale with your usage.</li>
+      </ul>
+
+      <h3>Usage</h3>
+      <p>
+        Include the modified version of TogetherJS along with Firebase.
+        You may also (optionally) set the HUB URL to your own Firebase:
+      </p>
+
+      <div class="highlight highlight-html"><pre><span class="nt">&lt;script&gt;</span>
+    <span class="nx">TowTruckConfig_hubBase</span> <span class="o">=</span> <span class="s2">"https://&lt;my-firebase&gt;.firebaseio.com/"</span><span class="p">;</span>
+<span class="nt">&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdn.firebase.com/v0/firebase.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"http://firebase.github.io/togetherjs/togetherjs.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+      </pre></div>
+
+      <p>Then use TogetherJS as you normally would:</p>
+
+      <div class="highlight highlight-html"><pre><span class="nt">&lt;button</span> <span class="na">onclick=</span><span class="s">"TowTruck(this); return false;"</span><span class="nt">&gt;</span>Start TowTruck<span class="nt">&lt;/button&gt;</span>
+      </pre></div>
+
+      <p>
+        If you want to build your own version of the JavaScript libraries, don't
+        forget to set <code>HUB_URL</code> to a valid Firebase URL
+        (<code>https://together.firebaseio-demo.com</code> by default)
+        while running grunt. For example:
+      </p>
+
+      <div class="highlight highlight-bash"><pre><span class="nv">HUB_URL</span><span class="o">=</span><span class="s2">"https://&lt;your-firebase&gt;.firebaseio.com/"</span> grunt --base-url<span class="o">=</span><span class="s2">"/togetherjs"</span> devwatch
+      </pre></div>
+    </article>
+    <script src="https://cdn.firebase.com/v0/firebase.js"></script>
+    <script src="http://firebase.github.io/togetherjs/togetherjs.js"></script>
+  </body>
+</html>
