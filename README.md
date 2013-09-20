@@ -13,7 +13,21 @@ There are two benefits to using Firebase with TogetherJS:
 * <strong>Scalability</strong> - Firebase is built to scale with your usage, eliminating the need to run and manage your own Hub server.
 
 ### Usage
-Set `HUB_URL` to any Firebase URL (`https://together.firebaseio-demo.com` by default) while running grunt
-to generate the library. For example:
+Include the modified version of TogetherJS along with Firebase. You may also
+(optionally) set the HUB URL to your own Firebase:
+
+    <script>
+      TowTruckConfig_hubBase = "https://<my-firebase>.firebaseio.com/";
+    </script>
+    <script src="https://cdn.firebase.com/v0/firebase.js"></script>
+    <script src="http://firebase.github.io/togetherjs/togetherjs-min.js"></script>
+
+Then use TogetherJS as you normally would:
+
+    <button onclick="TowTruck(this); return false;">Start TowTruck</button>
+
+If you want to build your own version of the JavaScript libraries, don't
+forget to set `HUB_URL` to a valid Firebase URL (`https://together.firebaseio-demo.com` by default)
+while running grunt. For example:
 
     HUB_URL="https://<your-firebase>.firebaseio.com/" grunt --base-url="/togetherjs" devwatch
