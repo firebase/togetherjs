@@ -1,11 +1,3 @@
 node_modules
 .DS_Store
 .env*
-addon/Profile
-dump.rdb
-app/http/public/recorder.css
-build
-togetherjs.mozillalabs.com
-addon/togetherjs.xpi
-togetherjs/togetherjs.css
-togetherjs/togetherjsPackage.js
