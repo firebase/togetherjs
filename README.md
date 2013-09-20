@@ -11,7 +11,7 @@ This repository lets you use <a href="http://firebase.com/" target="_blank">Fire
 ### Benefits
 There are two benefits to using Firebase with TogetherJS:
 
-* <strong>Persistence</strong> - Sessions are automatically persisted, which allows for easy replay of sessions (cursor movements, chat history, etc) if required. Note this is not enabled by default, see the comment on line 240 in channel.js to enable. 
+* <strong>Persistence</strong> - Sessions are automatically persisted, which allows for easy replay of sessions (cursor movements, chat history, etc) if required. <em>Note this is not enabled by default, see the comment on line 240 in channel.js to enable.</em> 
 * <strong>Scalability</strong> - Firebase is a robust service and is built to automatically scale with your usage.
 
 ### Usage
