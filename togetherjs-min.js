@@ -7,7 +7,7 @@
 
   var styleSheet = "/togetherjs/togetherjs.css";
 
-  var baseUrl = "https://firebase.github.io";
+  var baseUrl = "http://firebase.github.io/togetherjs";
   if (baseUrl == "__" + "baseUrl__") {
     // Reset the variable if it doesn't get substituted
     baseUrl = "";
