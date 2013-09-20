@@ -6,7 +6,7 @@ Learn more at the [original Github repository](https://github.com/mozilla/togeth
 
 This repository lets you use <a href="http://firebase.com/" target="_blank">Firebase</a> as the backend for your TogetherJS sessions.
 
-<a href="http://firebase.github.io/togetherjs/index.html?basehub#&togetherjs=AwC9FD9nwN" target="_blank">Try it out!</a>
+<a href="http://firebase.github.io/togetherjs/index.html?firebase=1#&togetherjs=Eb9UueHBrs" target="_blank">Try it out!</a>
 
 ### Benefits
 There are two benefits to using Firebase with TogetherJS:
