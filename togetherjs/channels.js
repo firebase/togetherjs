@@ -201,7 +201,7 @@ channels.FirebaseChannel = util.Class(AbstractChannel, {
 
   constructor: function (address) {
     this.href = address;
-    this.ref = new Firebase(address);
+    this.ref = new Firebase(address).limit(50);
     this.baseConstructor();
     this._local = false;
     this._initial = true;
