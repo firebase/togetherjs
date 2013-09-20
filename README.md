@@ -30,7 +30,7 @@ Include the modified version of TogetherJS along with Firebase. You may also
 Then use TogetherJS as you normally would:
 
 ```html
-<button onclick="TowTruck(this); return false;">Start TowTruck</button>
+<button onclick="TogetherJS(this); return false;">Start TogetherJS</button>
 ```
 
 If you want to build your own version of the JavaScript libraries, don't
